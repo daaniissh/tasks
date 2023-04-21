@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.trans {
+  transition: opacity 0.5s ease-out;
+}
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.slider-images {
+  animation: slide-right 1s linear infinite;
+}
+
+/* .slider-images:hover {
+  animation-play-state: paused;
+} */
+
+/* .slider-images:hover ~ .slider-images {
+  animation: slide-left 5s linear infinite;
+} */
