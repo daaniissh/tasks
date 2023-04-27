@@ -9,7 +9,6 @@ const Form = () => {
     birth: "",
     skills: []
   });
-  console.log(fields.skills, "==skills");
   const [error, setError] = useState({
     firstName: false,
     email: false,
@@ -123,7 +122,6 @@ const Form = () => {
     let value = e.target.value
 
     const { name } = e.target;
-    console.log(e);
     value.length === 0 ? setError((prev) => ({
       ...prev,
       [e.target.name]: true
@@ -157,7 +155,7 @@ const Form = () => {
     }
   }
 
-  console.log(error.gender, "==radio");
+
   return (
     <div>
       <form id='msform' onSubmit={handleSubmit} action="">
