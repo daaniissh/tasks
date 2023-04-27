@@ -1,0 +1,32 @@
+  // This is for handling input fields individually
+  const [firstName, setFirstName] = useState("");
+  const [open,setOpen] = useState(false)
+
+  //  This is for handling any number of inputs fields
+  //  The key should match the name attribute of the html
+  const [fields, setFields] = useState({
+    firstName: "",
+    email: "",
+    gender: "",
+    country: "",
+  });
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      // api call
+      // fields => API
+      console.log(fields);
+    };
+
+  // This is for handling input fields individually
+  const handleFirstName = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  //  This is for handling any number of inputs fields
+  const handleChange = (event) => {
+    setFields((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
