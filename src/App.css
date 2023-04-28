@@ -50,7 +50,7 @@
 }
 .list-parent .list-sub-parent{
   display: flex;
-  align-items: center;
+  align-items: center;  
   max-width: 170px;
 }
 .list-parent .list-sub-parent:hover{
